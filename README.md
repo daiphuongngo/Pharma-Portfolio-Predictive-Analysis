@@ -2,8 +2,7 @@
 
 ## Overview:
 
-This repository contains my work on the Pharma Sales Data's Forecast and Analysis. This is in the process to completion.
-
+This repository contains my work on the Pharma Sales Data's Forecast and Analysis. This project is underway.
 ## Languages & Tools:
 
 - `Python`
