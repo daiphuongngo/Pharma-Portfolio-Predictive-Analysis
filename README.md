@@ -49,6 +49,7 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
     # Return value must be of a sequence of pandas.DataFrame
     return result
 ```    
+![Python Queries - M01AE](https://user-images.githubusercontent.com/70437668/161901354-b6b8ac79-750d-4cd0-96fd-82e5573ca466.jpg)
 
 `SQL`
 ```
@@ -57,3 +58,6 @@ FROM t1
 GROUP BY Weekday_Name
 ORDER BY sum_M01AE ASC
 ```
+![SQL Queries - M01AE](https://user-images.githubusercontent.com/70437668/161901382-40f830c5-a41c-4a82-a94b-5daee87a3b14.jpg)
+
+The drug, M01AE, was most often sold on Sunday with the volume of 1384.94.
