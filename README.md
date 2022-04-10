@@ -61,3 +61,11 @@ ORDER BY sum_M01AE ASC
 ![SQL Queries - M01AE](https://user-images.githubusercontent.com/70437668/161901382-40f830c5-a41c-4a82-a94b-5daee87a3b14.jpg)
 
 The drug, M01AE, was most often sold on Sunday with the volume of 1384.94.
+
+### Total value by each day
+
+```
+SELECT Weekday_Name, M01AB + M01AE + N02BA + N02BE + N05B + N05C + R03 + R06 AS Total
+FROM t1
+GROUP BY Weekday_Name
+```
