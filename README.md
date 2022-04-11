@@ -62,6 +62,62 @@ ORDER BY sum_M01AE ASC
 
 The drug, M01AE, was most often sold on Sunday with the volume of 1384.94.
 
+```
+SELECT Weekday_Name, sum(M01AB) AS sum_M01AB
+FROM t1
+GROUP BY Weekday_Name
+ORDER BY sum_M01AB ASC
+```
+
+```
+SELECT Weekday_Name, sum(N02BA) AS sum_N02BA
+FROM t1
+GROUP BY Weekday_Name
+ORDER BY sum_N02BA ASC
+```
+
+```
+SELECT Weekday_Name, sum(N02BA) AS sum_N02BA
+FROM t1
+GROUP BY Weekday_Name
+ORDER BY sum_N02BA ASC
+```
+
+```
+SELECT Weekday_Name, sum(N02BE) AS sum_N02BE
+FROM t1
+GROUP BY Weekday_Name
+ORDER BY sum_N02BE ASC
+```
+
+```
+SELECT Weekday_Name, sum(N05B) AS sum_N05B
+FROM t1
+GROUP BY Weekday_Name
+ORDER BY sum_N05B ASC
+```
+
+```
+SELECT Weekday_Name, sum(N05C) AS sum_N05C
+FROM t1
+GROUP BY Weekday_Name
+ORDER BY sum_N05C ASC
+```
+
+```
+SELECT Weekday_Name, sum(R03) AS sum_R03
+FROM t1
+GROUP BY Weekday_Name
+ORDER BY sum_R03 ASC
+```
+
+```
+SELECT Weekday_Name, sum(R06) AS sum_R06
+FROM t1
+GROUP BY Weekday_Name
+ORDER BY sum_R06 ASC
+```
+
 ### Total value by each day
 
 ```
