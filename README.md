@@ -70,10 +70,10 @@ ORDER BY sum_M01AB ASC
 ```
 
 ```
-SELECT Weekday_Name, sum(N02BA) AS sum_N02BA
+SELECT Weekday_Name, sum(M01AE) AS sum_M01AE
 FROM t1
 GROUP BY Weekday_Name
-ORDER BY sum_N02BA ASC
+ORDER BY sum_M01AE ASC
 ```
 
 ```
@@ -124,4 +124,28 @@ ORDER BY sum_R06 ASC
 SELECT Weekday_Name, M01AB + M01AE + N02BA + N02BE + N05B + N05C + R03 + R06 AS Total
 FROM t1
 GROUP BY Weekday_Name
+```
+
+### Total value by 2015
+
+```
+SELECT LEFT(datum, 4) as Year, sum(M01AB) AS sum_M01AB, sum(M01AE) AS sum_M01AE, sum(N02BA) AS sum_N02BA, sum(N02BE) AS sum_N02BE, sum(N05B) AS sum_N05B, sum(N05C) AS sum_N05C, sum(R03) AS sum_R03, sum(R06) AS sum_R06
+FROM t1
+WHERE LEFT(datum, 4) == 2015
+```
+
+### Total value by 2016
+
+```
+SELECT LEFT(datum, 4) as Year, sum(M01AB) AS sum_M01AB, sum(M01AE) AS sum_M01AE, sum(N02BA) AS sum_N02BA, sum(N02BE) AS sum_N02BE, sum(N05B) AS sum_N05B, sum(N05C) AS sum_N05C, sum(R03) AS sum_R03, sum(R06) AS sum_R06
+FROM t1
+WHERE LEFT(datum, 4) == 2016
+```
+
+### Total value by 2017
+
+```
+SELECT LEFT(datum, 4) as Year, sum(M01AB) AS sum_M01AB, sum(M01AE) AS sum_M01AE, sum(N02BA) AS sum_N02BA, sum(N02BE) AS sum_N02BE, sum(N05B) AS sum_N05B, sum(N05C) AS sum_N05C, sum(R03) AS sum_R03, sum(R06) AS sum_R06
+FROM t1
+WHERE LEFT(datum, 4) == 2017
 ```
