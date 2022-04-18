@@ -52,6 +52,8 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
 ![Python Queries - M01AE](https://user-images.githubusercontent.com/70437668/161901354-b6b8ac79-750d-4cd0-96fd-82e5573ca466.jpg)
 
 `SQL`
+
+t1 represents my chosen dataset input into the file node.
 ```
 SELECT Weekday_Name, sum(M01AE) AS sum_M01AE
 FROM t1
