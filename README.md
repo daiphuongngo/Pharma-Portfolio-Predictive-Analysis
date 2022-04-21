@@ -12,6 +12,8 @@ This repository contains my work on the Pharma Sales Data's Forecast and Analysi
 
 - `Azure Machine Learning Studio`
 
+- `SQL`
+
 ## Analysis:
 
 ### On which day of the week is the second drug (M01AE) most often sold?
