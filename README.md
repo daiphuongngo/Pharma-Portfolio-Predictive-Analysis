@@ -8,7 +8,7 @@ This repository contains my work on the Pharma Sales Data's Forecast and Analysi
 
 - `Python`
 
-- `Machine Learning`
+- `Machine Learning` (on both Python and Azure)
 
 - `Azure Machine Learning Studio`
 
