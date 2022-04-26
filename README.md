@@ -153,3 +153,13 @@ SELECT LEFT(datum, 4) as Year, sum(M01AB) AS sum_M01AB, sum(M01AE) AS sum_M01AE,
 FROM t1
 WHERE LEFT(datum, 4) == 2017
 ```
+
+## Machine Learning in Python:
+
+- Linear Regression
+
+- Polynomial Regression
+
+- Simple Vector Regression (SVR)
+
+- Voting Regressor's results
