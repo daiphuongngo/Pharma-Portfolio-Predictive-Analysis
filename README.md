@@ -163,3 +163,7 @@ WHERE LEFT(datum, 4) == 2017
 - Simple Vector Regression (SVR)
 
 - Voting Regressor's results
+
+@Google Colab `Python`
+
+
