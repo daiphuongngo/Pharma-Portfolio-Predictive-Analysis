@@ -186,7 +186,7 @@ R06 RESMEAN:4.278758416393868, OBSMEAN:19.744589999960002, PERC:21.6705356576284
 
 ## Stationarity Analysis
 
-## Machine Learning in Python:
+## Machine Learning in Python and Azure:
 
 - Linear Regression
 
@@ -197,5 +197,8 @@ R06 RESMEAN:4.278758416393868, OBSMEAN:19.744589999960002, PERC:21.6705356576284
 - Voting Regressor's results
 
 @Google Colab `Python`
+
+
+@Azure Machine Learning Studio
 
 
