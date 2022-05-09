@@ -184,9 +184,9 @@ R03 RESMEAN:11.722244335544508, OBSMEAN:40.06845833336, PERC:29.25554119906046%
 R06 RESMEAN:4.278758416393868, OBSMEAN:19.744589999960002, PERC:21.67053565762842%
 ```
 
-## Stationarity Analysis
+## Stationarity Analysis: (to be continued)
 
-## Machine Learning in Python and Azure:
+## Machine Learning in Python and Azure: (to be continued)
 
 - Linear Regression
 
