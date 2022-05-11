@@ -199,6 +199,6 @@ R06 RESMEAN:4.278758416393868, OBSMEAN:19.744589999960002, PERC:21.6705356576284
 @Google Colab `Python`
 
 
-@Azure Machine Learning Studio
+@Azure-Machine-Learning-Studio
 
 
