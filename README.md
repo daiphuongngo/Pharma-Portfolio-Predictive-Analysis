@@ -156,6 +156,8 @@ WHERE LEFT(datum, 4) == 2017
 
 ## Time Series Analysis
 
+### Seasonality Analysis 
+
 ![download (3)](https://user-images.githubusercontent.com/70437668/166632744-1342e832-748c-408f-872a-9ba72c9ecb89.png)
 
 ![download (4)](https://user-images.githubusercontent.com/70437668/166632749-34128e92-31de-460f-af12-66e2a2dc31ee.png)
@@ -184,7 +186,11 @@ R03 RESMEAN:11.722244335544508, OBSMEAN:40.06845833336, PERC:29.25554119906046%
 R06 RESMEAN:4.278758416393868, OBSMEAN:19.744589999960002, PERC:21.67053565762842%
 ```
 
-## Stationarity Analysis (to be continued)
+### Stationarity Analysis (to be continued)
+
+### Regularity Analysis (to be continued)
+
+### Autocorrelation Analysis (to be continued)
 
 ## Machine Learning in Python and Azure (to be continued)
 
@@ -200,5 +206,11 @@ R06 RESMEAN:4.278758416393868, OBSMEAN:19.744589999960002, PERC:21.6705356576284
 
 
 @Azure-Machine-Learning-Studio
+
+
+
+# Reference:
+
+Pharma sales data analysis and forecasting by MILAN ZDRAVKOVIĆ: https://www.kaggle.com/code/milanzdravkovic/pharma-sales-data-analysis-and-forecasting
 
 
