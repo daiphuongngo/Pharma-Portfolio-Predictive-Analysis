@@ -213,4 +213,31 @@ R06 RESMEAN:4.278758416393868, OBSMEAN:19.744589999960002, PERC:21.6705356576284
 
 Pharma sales data analysis and forecasting by MILAN ZDRAVKOVIĆ: https://www.kaggle.com/code/milanzdravkovic/pharma-sales-data-analysis-and-forecasting
 
+If `M01AB, N02BA, R06` is purchased, then with confidence **78.66%** `R03` will also be purchased. This rule has a lift ratio of
+**1.0214**.
 
+If `M01AB, N02BA, R06, N02BE` is purchased, then with confidence **78.66%** `R03` will also be purchased. This rule has a lift ratio of
+**1.0214**.
+
+If `N05B, M01AB, N02BA, R06` is purchased, then with confidence **78.65%** `R03` will also be purchased. This rule has a lift ratio of
+**1.0212**.
+
+If `R06, M01AB, N02BA, N05B, N02BE` is purchased, then with confidence **78.65%** `R03` will also be purchased. This rule has a lift ratio of
+**1.0212**.
+
+If `M01AE, R06, M01AB, N02BA, N05B, N02BE` is purchased, then with confidence **78.62%** `R03` will also be purchased. This rule has a lift ratio of **1.0208**.
+
+If `M01AE, R06, M01AB, N02BA, N05B` is purchased, then with confidence **78.62%** `R03` will also be purchased. This rule has a lift ratio of
+**1.0208**.
+
+The support for the rule indicates its impact in terms of overall size: How many transactions are affected? If
+only a small number of transactions are affected, the rule may be of little use (unless the consequent is very
+valuable and/or the rule is very efficient in finding it).
+
+• The lift ratio indicates how efficient the rule is in finding consequents, compared to random selection. A very
+efficient rule is preferred to an inefficient rule, but we must still consider support: A very efficient rule that
+has very low support may not be as desirable as a less efficient rule with much greater support.
+
+• The confidence tells us at what rate consequents will be found and is useful in determining the business or
+operational usefulness of a rule: A rule with low confidence may find consequents at too low a rate to be
+worth the cost of (say) promoting the consequent in all the transactions that involve the antecedent.
