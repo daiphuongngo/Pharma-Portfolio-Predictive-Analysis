@@ -207,11 +207,7 @@ R06 RESMEAN:4.278758416393868, OBSMEAN:19.744589999960002, PERC:21.6705356576284
 
 @Azure-Machine-Learning-Studio
 
-
-
-# Reference:
-
-Pharma sales data analysis and forecasting by MILAN ZDRAVKOVIĆ: https://www.kaggle.com/code/milanzdravkovic/pharma-sales-data-analysis-and-forecasting
+# Association Rules:
 
 If `M01AB, N02BA, R06` is purchased, then with confidence **78.66%** `R03` will also be purchased. This rule has a lift ratio of
 **1.0214**.
@@ -241,3 +237,7 @@ has very low support may not be as desirable as a less efficient rule with much 
 • The confidence tells us at what rate consequents will be found and is useful in determining the business or
 operational usefulness of a rule: A rule with low confidence may find consequents at too low a rate to be
 worth the cost of (say) promoting the consequent in all the transactions that involve the antecedent.
+
+# Reference:
+
+Pharma sales data analysis and forecasting by MILAN ZDRAVKOVIĆ: https://www.kaggle.com/code/milanzdravkovic/pharma-sales-data-analysis-and-forecasting
