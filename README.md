@@ -238,6 +238,89 @@ has very low support may not be as desirable as a less efficient rule with much 
 operational usefulness of a rule: A rule with low confidence may find consequents at too low a rate to be
 worth the cost of (say) promoting the consequent in all the transactions that involve the antecedent.
 
+## Time Series Forecasting
+
+### M01AB 
+
+#### Plots that enhance the different components of the time series
+
+(a) Zoom-in to 1 year of data 
+
+(b) Original series with overlaid quadratic trendline
+
+![download](https://user-images.githubusercontent.com/70437668/173319464-ff180ab3-0963-4861-b707-9fa1220055dc.png)
+
+#### Naive and Seasonal Naive Forecasts in a 3-year validation set for M01AB
+
+![download (1)](https://user-images.githubusercontent.com/70437668/173319686-e8cc73b2-17b4-4812-8fdf-91f26877f4a9.png)
+
+#### Predictive accuracy of naive and seasonal naive forecasts in the validation and training set for M01AB
+
+Table below compares the accuracies of these two naive forecasts.
+Because M01AB has monthly seasonality, the seasonal naive forecast is the clear winner on both training and validation and
+on all popular measures. In choosing between the two models, the accuracy on the validation set is more relevant than the accuracy on the training set. Performance on the validation set is more indicative of how the models will perform in the future.
+
+##### Validation set
+
+```
+regressionSummary(valid_ts_M01AB, naive_pred_M01AB)
+```
+
+```
+Regression statistics
+
+                      Mean Error (ME) : 0.1731
+       Root Mean Squared Error (RMSE) : 2.7432
+            Mean Absolute Error (MAE) : 2.2325
+          Mean Percentage Error (MPE) : -70.3831
+Mean Absolute Percentage Error (MAPE) : 98.4098
+```
+
+```
+ regressionSummary(valid_ts_M01AB, seasonal_pred_M01AB)
+```
+
+```
+Regression statistics
+
+                      Mean Error (ME) : -0.1253
+       Root Mean Squared Error (RMSE) : 4.5251
+            Mean Absolute Error (MAE) : 3.6464
+          Mean Percentage Error (MPE) : -75.0077
+Mean Absolute Percentage Error (MAPE) : 121.3996
+```
+
+##### Training set
+
+```
+# Calculate naive metrics for training set (shifted by 1 month)
+regressionSummary(train_ts_M01AB[1:], train_ts_M01AB[:-1])
+```
+
+```
+Regression statistics
+
+               Mean Error (ME) : 0.0026
+Root Mean Squared Error (RMSE) : 3.7529
+     Mean Absolute Error (MAE) : 2.9228
+```
+
+```
+ # Calculate seasonal naive metrics for training set (shifted by 12 months)
+regressionSummary(train_ts_M01AB[12:], train_ts_M01AB[:-12])
+```
+
+```
+Regression statistics
+
+               Mean Error (ME) : 0.0082
+Root Mean Squared Error (RMSE) : 3.7524
+     Mean Absolute Error (MAE) : 2.9416
+```
+
+## Regression-Based Foreacasting
+
+
 # Reference:
 
 Pharma sales data analysis and forecasting by MILAN ZDRAVKOVIĆ: https://www.kaggle.com/code/milanzdravkovic/pharma-sales-data-analysis-and-forecasting
