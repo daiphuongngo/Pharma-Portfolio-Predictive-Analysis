@@ -320,6 +320,163 @@ Root Mean Squared Error (RMSE) : 3.7524
 
 ## Regression-Based Foreacasting
 
+### Linear Regression
+
+#### A linear trend fit to M01AB in the training period and forecasted in the validation period
+
+![download (2)](https://user-images.githubusercontent.com/70437668/173328494-cd1c1417-6ea7-4fec-a8f2-088488838612.png)
+
+
+#### Summary
+```
+OLS Regression Results
+Dep. Variable:	M01AB_Sales	R-squared:	0.010
+Model:	OLS	Adj. R-squared:	0.009
+Method:	Least Squares	F-statistic:	20.12
+Date:	Mon, 13 Jun 2022	Prob (F-statistic):	7.69e-06
+Time:	09:36:11	Log-Likelihood:	-5010.8
+No. Observations:	2070	AIC:	1.003e+04
+Df Residuals:	2068	BIC:	1.004e+04
+Df Model:	1		
+Covariance Type:	nonrobust		
+coef	std err	t	P>|t|	[0.025	0.975]
+Intercept	4.5601	0.120	38.064	0.000	4.325	4.795
+trend	0.0004	0.000	4.485	0.000	0.000	0.001
+Omnibus:	137.713	Durbin-Watson:	1.899
+Prob(Omnibus):	0.000	Jarque-Bera (JB):	168.796
+Skew:	0.635	Prob(JB):	2.22e-37
+Kurtosis:	3.586	Cond. No.	2.39e+03
+
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.39e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+```
+
+### Exponential Regression
+
+![download (3)](https://user-images.githubusercontent.com/70437668/173328669-4f66a2cc-6343-4ccf-83eb-1b67fefab10a.png)
+
+
+### Polynomial Regression
+
+#### Quadratic trend model used to forecast M01AB. Plots of fitted, forecasted, and actual values (a) and forecast errors (b)
+
+![download (4)](https://user-images.githubusercontent.com/70437668/173328690-031d653b-dc7d-4e2e-b0c3-71998334cf28.png)
+
+#### Summary of Polynomial Regression with Quadratic Trend
+
+```
+OLS Regression Results
+Dep. Variable:	M01AB_Sales	R-squared:	0.022
+Model:	OLS	Adj. R-squared:	0.021
+Method:	Least Squares	F-statistic:	23.60
+Date:	Mon, 13 Jun 2022	Prob (F-statistic):	7.36e-11
+Time:	09:49:36	Log-Likelihood:	-4997.4
+No. Observations:	2070	AIC:	1.000e+04
+Df Residuals:	2067	BIC:	1.002e+04
+Df Model:	2		
+Covariance Type:	nonrobust		
+coef	std err	t	P>|t|	[0.025	0.975]
+Intercept	3.8699	0.179	21.656	0.000	3.519	4.220
+trend	0.0024	0.000	6.143	0.000	0.002	0.003
+np.square(trend)	-9.651e-07	1.86e-07	-5.180	0.000	-1.33e-06	-6e-07
+Omnibus:	136.147	Durbin-Watson:	1.923
+Prob(Omnibus):	0.000	Jarque-Bera (JB):	167.470
+Skew:	0.626	Prob(JB):	4.31e-37
+Kurtosis:	3.610	Cond. No.	5.76e+06
+
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 5.76e+06. This might indicate that there are
+strong multicollinearity or other numerical problems.
+```
+
+#### Summary of output from fitting additive seasonality to the M01AB data in the training period
+
+```
+OLS Regression Results
+Dep. Variable:	M01AB_Sales	R-squared:	0.005
+Model:	OLS	Adj. R-squared:	-0.001
+Method:	Least Squares	F-statistic:	0.8905
+Date:	Mon, 13 Jun 2022	Prob (F-statistic):	0.549
+Time:	09:39:19	Log-Likelihood:	-5015.9
+No. Observations:	2070	AIC:	1.006e+04
+Df Residuals:	2058	BIC:	1.012e+04
+Df Model:	11		
+Covariance Type:	nonrobust		
+coef	std err	t	P>|t|	[0.025	0.975]
+Intercept	5.0223	0.201	24.952	0.000	4.628	5.417
+C(Month)[T.2]	-0.0228	0.291	-0.078	0.938	-0.594	0.548
+C(Month)[T.3]	-0.1102	0.284	-0.388	0.698	-0.668	0.447
+C(Month)[T.4]	0.0956	0.287	0.334	0.739	-0.466	0.658
+C(Month)[T.5]	-0.1762	0.284	-0.620	0.536	-0.734	0.381
+C(Month)[T.6]	-0.3076	0.287	-1.073	0.283	-0.870	0.255
+C(Month)[T.7]	0.1856	0.284	0.653	0.514	-0.372	0.743
+C(Month)[T.8]	0.4060	0.284	1.428	0.153	-0.151	0.963
+C(Month)[T.9]	-0.1069	0.300	-0.357	0.721	-0.695	0.481
+C(Month)[T.10]	-0.0797	0.298	-0.267	0.789	-0.664	0.505
+C(Month)[T.11]	0.2033	0.301	0.676	0.499	-0.387	0.793
+C(Month)[T.12]	-0.0649	0.298	-0.218	0.828	-0.650	0.520
+Omnibus:	142.033	Durbin-Watson:	1.889
+Prob(Omnibus):	0.000	Jarque-Bera (JB):	175.275
+Skew:	0.646	Prob(JB):	8.70e-39
+Kurtosis:	3.603	Cond. No.	12.5
+
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+```
+
+#### Regression model with seasonality applied to the M01AB (a) and its forecast errors (b)
+
+![download (5)](https://user-images.githubusercontent.com/70437668/173329014-9f2833e6-6e66-42f9-a04a-12cd036098eb.png)
+
+#### Regression model with trend and seasonality applied to M01AB (a) and its forecast errors (b)
+
+![download (6)](https://user-images.githubusercontent.com/70437668/173329152-14a94ab8-3ec6-477b-a8e2-ea65d415cfbf.png)
+
+#### Summary of output from fitting trend and seasonality to M01AB in the training period
+
+```
+OLS Regression Results
+Dep. Variable:	M01AB_Sales	R-squared:	0.027
+Model:	OLS	Adj. R-squared:	0.021
+Method:	Least Squares	F-statistic:	4.433
+Date:	Mon, 13 Jun 2022	Prob (F-statistic):	1.80e-07
+Time:	09:44:24	Log-Likelihood:	-4992.2
+No. Observations:	2070	AIC:	1.001e+04
+Df Residuals:	2056	BIC:	1.009e+04
+Df Model:	13		
+Covariance Type:	nonrobust		
+coef	std err	t	P>|t|	[0.025	0.975]
+Intercept	3.9320	0.254	15.459	0.000	3.433	4.431
+C(Month)[T.2]	-0.0370	0.288	-0.129	0.898	-0.602	0.528
+C(Month)[T.3]	-0.1398	0.281	-0.497	0.619	-0.691	0.412
+C(Month)[T.4]	0.0505	0.284	0.178	0.859	-0.506	0.607
+C(Month)[T.5]	-0.2348	0.281	-0.835	0.404	-0.787	0.317
+C(Month)[T.6]	-0.3780	0.284	-1.332	0.183	-0.935	0.179
+C(Month)[T.7]	0.1053	0.282	0.374	0.709	-0.447	0.658
+C(Month)[T.8]	0.3175	0.282	1.126	0.260	-0.235	0.870
+C(Month)[T.9]	-0.2555	0.297	-0.859	0.390	-0.839	0.328
+C(Month)[T.10]	-0.2480	0.296	-0.838	0.402	-0.828	0.333
+C(Month)[T.11]	0.0214	0.299	0.072	0.943	-0.564	0.607
+C(Month)[T.12]	-0.2585	0.296	-0.873	0.383	-0.839	0.322
+trend	0.0025	0.000	6.235	0.000	0.002	0.003
+np.square(trend)	-1.005e-06	1.89e-07	-5.309	0.000	-1.38e-06	-6.34e-07
+Omnibus:	135.228	Durbin-Watson:	1.934
+Prob(Omnibus):	0.000	Jarque-Bera (JB):	166.110
+Skew:	0.624	Prob(JB):	8.50e-37
+Kurtosis:	3.607	Cond. No.	2.31e+07
+
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.31e+07. This might indicate that there are
+strong multicollinearity or other numerical problems.
+```
 
 # Reference:
 
